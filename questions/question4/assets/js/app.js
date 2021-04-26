@@ -22,7 +22,8 @@ document.querySelector("#next").addEventListener("click", (e) => {
     
     
     localStorage.setItem('selects', JSON.stringify(selectOptions))
-    window.location.href = '/questions/question5/';
+    window.location.href = '../question5/';
+
   }
 });
 

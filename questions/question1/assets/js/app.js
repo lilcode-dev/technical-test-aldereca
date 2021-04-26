@@ -32,7 +32,7 @@ document.querySelector("#next").addEventListener("click", (e) => {
 
     localStorage.setItem("selects", JSON.stringify(selectOptions));
     console.log(inputs);
-    window.location.href = "/questions/question2/";
+    window.location.href = "../question2/";
   }
 });
 

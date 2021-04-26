@@ -18,7 +18,8 @@ document.querySelector("#next").addEventListener("click", (e) => {
   } else {
     selectOptions.question2 = inputSelect;
     localStorage.setItem("selects", JSON.stringify(selectOptions));
-    window.location.href = "/questions/question3/";
+    window.location.href = "../question3/";
+    
   }
 });
 
