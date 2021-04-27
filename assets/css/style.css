@@ -1,117 +1,146 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+:root {
+  --bg-color: rgba(255, 255, 255, 0);
+  --color-text: #000;
+  --primary-color: #21bf73;
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #fff
+  background: linear-gradient(
+    82deg,
+    rgba(255, 255, 255, 1) 44%,
+    rgba(33, 191, 115, 0.685) 100%
+  );
+
+  height: 100vh;
+}
+form {
+  margin: 0 10px 10px 10px;
 }
 .title-quiz h1 {
-    font-size: 3rem;
-    color: #21bf73;
-    padding: 0 0 0 50px;
+  font-size: 3rem;
+  color: var(--primary-color);
+  padding: 0 0 0 10px;
+}
+.initial {
+  margin-top: 80px !important;
 }
 .container {
-    color: #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    max-width: 700px
+  background-color: rgba(255, 255, 255, 0.253);
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: #000;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  max-width: 700px;
 }
 .question-container {
-    padding-top: 100px;
+  padding-top: 100px;
 }
-.container>p {
-    font-size: 32px
+.container > p {
+  font-size: 32px;
+  color: #000;
+
 }
 
 .question {
-    width: 75%
+  width: 75%;
 }
 
 .options {
-    position: relative;
-    padding-left: 40px
+  position: relative;
+  padding-left: 40px;
 }
 
 #options label {
-    display: block;
-    margin-bottom: 15px;
-    font-size: 14px;
-    cursor: pointer
+  display: block;
+  margin-bottom: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #000;
+  font-weight: 800;
 }
 
 .options input {
-    opacity: 0
+  opacity: 0;
 }
 
 .checkmark {
-    position: absolute;
-    top: -1px;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #555;
-    border: 1px solid #ddd;
-    border-radius: 50%
+  background-color: var(--bg-color);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  left: 0;
+  top: -1px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
 }
 
-.options input:checked~.checkmark:after {
-    display: block
+.options input:checked ~ .checkmark:after {
+  display: block;
 }
 
 .options .checkmark:after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    display: block;
-    background: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    transition: 300ms ease-in-out 0s
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 300ms ease-in-out 0s;
 }
 
-.options input[type="radio"]:checked~.checkmark {
-    background: #21bf73;
-    transition: 300ms ease-in-out 0s
+.options input[type="radio"]:checked ~ .checkmark {
+  background: var(--primary-color);
+  transition: 300ms ease-in-out 0s;
 }
 
-.options input[type="radio"]:checked~.checkmark:after {
-    transform: translate(-50%, -50%) scale(1)
+.options input[type="radio"]:checked ~ .checkmark:after {
+  transform: translate(-50%, -50%) scale(1);
 }
-
 
 .btn {
-    margin: 0 0 0 10px;
-}
-.btn-primary:hover {
-    background-color: #21bf73;
-    border: 1px solid #21bf73
+  margin: 0 0 0 10px;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+  -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  
 }
 
-.btn-success, .btn-warning {
-    padding: 5px 25px;
-    background-color: #21bf73
+.btn-primary:hover {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-success {
+  padding: 5px 25px;
+  background-color: var(--primary-color);
 }
 
 .send-question {
-    color: #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /* background-color: rgba(255, 255, 255, 0); */
+  color: #0000 !important;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@media(max-width:576px) {
-    .question {
-        width: 100%;
-        word-spacing: 2px
-    }
+@media (max-width: 576px) {
+  .question {
+    width: 100%;
+    word-spacing: 2px;
+  }
 }
