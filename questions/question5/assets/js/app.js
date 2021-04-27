@@ -56,7 +56,7 @@ document.querySelector("#send").addEventListener("click", (e) => {
   }
 });
 
-document.querySelector("#reset").addEventListener("click", (e) => {
+document.querySelector("#reset").addEventListener("dblclick", (e) => {
   e.preventDefault();
   localStorage.removeItem("selects");
   window.location.href = "../../";
