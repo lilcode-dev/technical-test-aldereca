@@ -1,0 +1,14 @@
+{
+    "name": "quiz-technical-test-aldereca",
+    "description": "technical-test",
+    "authors": "Wilfri Marte",
+    "version": "1.0.0",
+    "main": "pathToMain",
+    "dependencies": {},
+    "prettier":{
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true
+    }
+}
